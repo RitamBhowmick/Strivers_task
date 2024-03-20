@@ -19,7 +19,7 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://iammritam11:6T0gvwG8LTVrOdHU@cluster0.s97rr6p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://iammritam11:6T0gvwG8LTVrOdHU@cluster0.s97rr6p.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
 mongoose.connection
     .once("open", () => { console.log("Connected to DB....."); })
     .on("error", () => { console.log("problem to connect to DB ..!!!!!");
