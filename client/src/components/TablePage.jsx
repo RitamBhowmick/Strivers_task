@@ -8,7 +8,7 @@ export default function TablePage() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/snippets")
+    axios.get("https://strivers-task-api.vercel.app/snippets")
     .then((e)=>{
             setinfoFromDb(e.data)
         })
@@ -20,7 +20,7 @@ export default function TablePage() {
     },[reload])
 
     const logout =  async () => {
-      await axios.post('http://localhost:5000/logout');
+      await axios.post('https://strivers-task-api.vercel.app/logout');
       navigate('/');
     }
 
