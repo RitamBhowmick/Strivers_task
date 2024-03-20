@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   credentials: true,
-  origin: 'https://strivers-task.vercel.app',
+  origin: 'https://strivers-task-frontend.vercel.app',
   methods: ["POST", "GET"],
 }));
 app.use(bodyParser.json());
