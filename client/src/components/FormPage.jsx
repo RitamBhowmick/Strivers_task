@@ -12,7 +12,7 @@ export default function FormPage(){
     const handleSubmit = async (ev) => {
       ev.preventDefault();
       try {
-        await axios.post('http://localhost:5000/submit', {
+        await axios.post('https://strivers-task-api.vercel.app/submit', {
           username,
           language,
           stdin,
