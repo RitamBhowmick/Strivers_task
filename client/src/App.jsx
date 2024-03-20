@@ -5,6 +5,7 @@ import TablePage from "./components/TablePage.jsx";
 
 function App() {
   const [snippets, setSnippets] = useState([]);
+  axios.defaults.withCredentials = true;
 
   return (
     <div>
