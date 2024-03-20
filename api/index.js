@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL,
+  origin: 'https://strivers-task.vercel.app',
+  methods: ["POST", "GET"],
 }));
 app.use(bodyParser.json());
 
@@ -24,7 +25,7 @@ mongoose.connection
     .on("error", () => { console.log("problem to connect to DB ..!!!!!");
 });
 
-app.use('/test', (req, res) => {
+app.use('/', (req, res) => {
   res.json("Test Ok")
 });
 
